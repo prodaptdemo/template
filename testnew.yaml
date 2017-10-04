@@ -16,4 +16,4 @@ topology_template:
             requirements: [{virtualLink: {node: VL1}}, {virtualBinding: {node: VDU1}}]
         VL1:
             type: tosca.nodes.nfv.VL
-            properties: {network_name: net1, vendor: sdhyahahdsffdf}
+            properties: {network_name: net1, vendor: sdgs}
