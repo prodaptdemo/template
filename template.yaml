@@ -4,7 +4,7 @@ metadata:
 topology_template:
     node_templates:
         firewall_vnfc:
-            type: sdhsh
+            type: etwtw
             requirements: [{host: VDU1}]
             interfaces: {Standard: {create: install_vnfc.sh}}
         VDU1:
@@ -15,5 +15,5 @@ topology_template:
             properties: {management: true, anti_spoofing_protection: false}
             requirements: [{virtualLink: {node: VL1}}, {virtualBinding: {node: VDU1}}]
         VL1:
-            type: hsdhs
-            properties: {network_name: net1, vendor: shddsh}
+            type: yewytweyw
+            properties: {network_name: net1, vendor: dssgs}
