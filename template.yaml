@@ -16,4 +16,4 @@ topology_template:
             requirements: [{virtualLink: {node: VL1}}, {virtualBinding: {node: VDU1}}]
         VL1:
             type: hj
-            properties: {network_name: net1, vendor: kfg}
+            properties: {network_name: net1, vendor: kfgg}
