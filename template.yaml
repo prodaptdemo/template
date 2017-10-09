@@ -4,16 +4,18 @@ metadata:
 topology_template:
     node_templates:
         firewall_vnfc:
-            type: wet
+            type: ""
             requirements: [{host: VDU1}]
             interfaces: {Standard: {create: install_vnfc.sh}}
         VDU1:
             type: tosca.nodes.nfv.VDU.Tacker
-            properties: {image: cirros-0.3.4-x86_64-uec, flavor: m1.tiny, mgmt_driver: noop, key_name: stack_key, config: "param0: key1\nparam1: key2\n"}
+            properties: {image: '-1', flavor: '-1', mgmt_driver: noop, key_name: stack_key, config: "param0: key1\nparam1: key2\n"}
         CP1:
             type: tosca.nodes.nfv.CP.Tacker
             properties: {management: true, anti_spoofing_protection: false}
             requirements: [{virtualLink: {node: VL1}}, {virtualBinding: {node: VDU1}}]
         VL1:
-            type: Samp
-            properties: {network_name: net1, vendor: fahhhshsdsh}
+            type: ""
+            properties: {network_name: net1, vendor: ""}
+        VDU2:
+            properties: {}
