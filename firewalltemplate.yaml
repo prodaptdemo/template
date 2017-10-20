@@ -3,5 +3,4 @@ vdus:
     config:
       firewall: |
         package firewall
-           config defaults
-           option syn_flood '1' 
+           config default\n    option syn_flood '1'\nconfig zone\n    option name 'lan'\n 
