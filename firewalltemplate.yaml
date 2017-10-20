@@ -3,7 +3,7 @@ vdus:
     config:
       firewall: |
         package firewall
-           config undefined
+           config default
                option syn_flood 1
-           config undefined
+           config zone
                option name lan
