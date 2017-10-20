@@ -4,6 +4,6 @@ vdus:
       firewall: |
         package firewall
            config defaults
-           option syn_flood '1'
+               option syn_flood '1'
            config rule
-           option syn_flood '1' 
+               option syn_flood '1' 
