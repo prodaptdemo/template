@@ -6,7 +6,8 @@ vdus:
            config defaults
                option syn_flood '1'
            config rule
-               option syn_flood '2'     config defaults
+               option syn_flood '2'
+            config defaults
                option syn_flood '1'
            config rule
-               option syn_flood '2' 
+               option syn_flood '2'
