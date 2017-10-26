@@ -17,3 +17,19 @@ topology_template:
         availability_zone: nova
         mgmt_driver: noop
         config: test
+    CP1:
+      type: tosca.nodes.nfv.CP.Tacker
+      properties:
+        management: true
+        order: 0
+        anti_spoofing_protection: false
+      requirements:
+        - virtualLink:
+            node: VDU1
+        - virtualBinding:
+            node: VL1
+    VL1:
+      type: tosca.nodes.nfv.VL
+      properties:
+        network_name: net1
+        vendor: Tacker
