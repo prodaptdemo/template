@@ -4,14 +4,16 @@ metadata:
   template_name: sample-tosca-vnfd
 topology_template:
   node_templates:
-    CP1:
-      type: tosca.nodes.nfv.CP.Tacker
+    VDU1:
+      type: tosca.nodes.nfv.VDU.Tacker
+      capabilities:
+        nfv_compute:
+          properties:
+            num_cpus: 1
+            mem_size: 512 MB
+            disk_size: 1 GB
       properties:
-        management: true
-        order: 0
-        anti_spoofing_protection: false
-      requirements:
-        - virtualLink:
-            node: sg
-        - virtualBinding:
-            node: sd
+        image: cirros-0.3.4-x86_64-uec
+        availability_zone: nova
+        mgmt_driver: noop
+        config: test
